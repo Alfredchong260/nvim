@@ -11,7 +11,8 @@ Plug 'racer-rust/vim-racer'
 Plug 'vim-scripts/VimIM'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary' " For Commenting gcc & gc
-" Plug 'vim-airline/vim-airline' " Status bar
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plug 'tc50cal/vim-terminal' " Vim Terminal
 Plug 'preservim/tagbar' " Tagbar for code navigation
 Plug 'bfredl/nvim-ipy'
@@ -43,6 +44,10 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
 
 " NerdTree
 let NERDTreeQuirOnOpen=1
@@ -63,18 +68,3 @@ nmap <silent> <leader>jk :ConnectToPipenvKernel<Enter>
 nmap <silent> <leader>jc <Plug>(IPy-RunCell)
 nmap <silent> <leader>ja <Plug>(IPy-RunAll)
 
-" " deoplete
-" let g:deoplete#enable_at_startup = 1
-" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-" " Enable alignment
-" let g:neoformat_basic_format_align = 1
-
-" " Enable tab to space conversion
-" let g:neoformat_basic_format_retab = 1
-
-" " Enable trimmming of trailing whitespace
-" let g:neoformat_basic_format_trim = 1
-
-" call neomake#configure#automake('nrwi', 500)
