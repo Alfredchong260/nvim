@@ -11,8 +11,8 @@ Plug 'racer-rust/vim-racer'
 Plug 'vim-scripts/VimIM'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary' " For Commenting gcc & gc
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tc50cal/vim-terminal' " Vim Terminal
 Plug 'preservim/tagbar' " Tagbar for code navigation
 Plug 'bfredl/nvim-ipy'
