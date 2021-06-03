@@ -90,7 +90,6 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 
-
 fun! TrimWhiteSpace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
