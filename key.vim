@@ -37,7 +37,7 @@ nnoremap <leader>i :ls<CR>:b<Space>
 nnoremap <leader>dd :bd<CR>
 
 " Close current window
-nnoremap <leader>c :q<CR>
+nnoremap <leader>c :wq<CR>
 
 " Write current buffer
 nnoremap <leader>w :write<CR>
