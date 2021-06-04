@@ -1,6 +1,5 @@
 " Plug in
 call plug#begin('~/.config/nvim/autoload/plugged')
-" Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
@@ -28,6 +27,12 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround' " Surrounding ysw)
 Plug 'pappasam/coc-jedi', { 'do': 'yarn install --frozen-lockfile && yarn build' }
+
+" Better Syntax Support
+Plug 'sheerun/vim-polyglot'
+" Auto pairs for '(' '[' '{'
+Plug 'jiangmiao/auto-pairs'
+
 
 
 call plug#end()
