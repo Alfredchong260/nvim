@@ -45,4 +45,3 @@ source ~/.config/nvim/plugin.vim
 source ~/.config/nvim/plug_config/default_coc.vim
 source ~/.config/nvim/key.vim
 source ~/.config/nvim/airline.vim
-source ~/.config/nvim/plug_config/fzf.vim
