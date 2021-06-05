@@ -1,4 +1,3 @@
-" Plug in
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 Plug 'jremmen/vim-ripgrep'
@@ -33,26 +32,20 @@ Plug 'sheerun/vim-polyglot'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
 
-
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 
 call plug#end()
 
-" coc config
-
-source $HOME/.config/nvim/default_coc.vim
 
 " Colorscheme
 colorscheme gruvbox
-let g:airline_theme='gruvbox'
 
 if (has("termguicolors"))
     set termguicolors
 endif
-
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'default'
-
 
 " NerdTree
 let NERDTreeQuirOnOpen=1
@@ -73,3 +66,6 @@ nmap <silent> <leader>jk :ConnectToPipenvKernel<Enter>
 nmap <silent> <leader>jc <Plug>(IPy-RunCell)
 nmap <silent> <leader>ja <Plug>(IPy-RunAll)
 
+" coc config
+
+source $HOME/.config/nvim/plug_config/default_coc.vim

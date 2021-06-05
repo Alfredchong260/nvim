@@ -105,7 +105,7 @@ augroup exe_code
     autocmd!
 
     " execute python code
-    autocmd FileType python nnoremap <buffer> <localleader>rp
+    autocmd FileType python nnoremap <buffer> <localleader>r
                 \ :sp<CR> :term python3 %<CR> :startinsert<CR>
 
 augroup END

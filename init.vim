@@ -42,5 +42,7 @@ nmap <silent> <leader>jc <Plug>(IPy-RunCell)
 nmap <silent> <leader>ja <Plug>(IPy-RunAll)
 
 source ~/.config/nvim/plugin.vim
-source ~/.config/nvim/default_coc.vim
+source ~/.config/nvim/plug_config/default_coc.vim
 source ~/.config/nvim/key.vim
+source ~/.config/nvim/airline.vim
+source ~/.config/nvim/plug_config/fzf.vim
