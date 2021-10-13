@@ -2,6 +2,7 @@
 let mapleader=" "
 let maplocalleader=" "
 imap jj <ESC>
+imap jk <ESC>
 
 " jump up 4 line in normal mode
 nnoremap <silent> <C-k> :normal 4k<CR>
@@ -37,7 +38,7 @@ nnoremap <leader>i :ls<CR>:b<Space>
 nnoremap <leader>dd :bd<CR>
 
 " Close current window
-nnoremap <leader>c :wq<CR>
+nnoremap <leader>wq :wq<CR>
 
 " Write current buffer
 nnoremap <leader>w :write<CR>
@@ -66,40 +67,6 @@ xnoremap <leader> :normal gv"+yy<CR>
 
 nnoremap <Space> <Nop>
 nnoremap <leader>ts :bel split term://fish<CR>:resize 10<CR>i
-
-let g:racer_cmd = "/home/user/.cargo/bin/racer"
-let g:racer_experimental_completer = 1
-let g:racer_insert_paren = 1
-augroup Racer
-    autocmd!
-    autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
-    autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
-    autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
-    autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
-    autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
-    autocmd FileType rust nmap <buffer> <leader>gD <Plug>(rust-doc-tab)
-augroup END
-
-
-if executable('rg')
-    let g:rg_derive_root='true'
-endif
-
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
-
-
-fun! TrimWhiteSpace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-
-augroup ALFRED
-    autocmd!
-    autocmd BufWritePre * :call TrimWhiteSpace()
-augroup END
 
 augroup exe_code
     autocmd!
